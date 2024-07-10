@@ -5,7 +5,7 @@ export default function StudentListRow(props){
 
 
     const handleClick =()=>{
-        Axios.delete("http://localhost:4000/studentRoute/delete-student/" +_id)
+        Axios.delete("https://mernapplicationbackend-7.onrender.com/studentRoute/delete-student/" +_id)
         .then((res)=>{
             if(res.status === 200){
                 alert("Record is deleted");
