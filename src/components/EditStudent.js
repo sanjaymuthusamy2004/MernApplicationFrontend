@@ -12,7 +12,7 @@ export default function EditStudent(){
     const [newData,setNewData]=useState([]);
    
     useEffect(()=>{
-        Axios.get("http://localhost:4000/studentRoute/update-student/"+id)
+        Axios.get("https://mernapplicationbackend-7.onrender.com/update-student/"+id)
         .then((res)=>{
             if(res.status === 200){
                 const {name,email,regNo}=res.data;
@@ -34,7 +34,7 @@ export default function EditStudent(){
 
     const handleSubmit =()=>{
         const data={name:newData[0],email:newData[1],regNo:newData[2]}
-        Axios.put("http://localhost:4000/studentRoute/update-student/"+id,data)
+        Axios.put("https://mernapplicationbackend-7.onrender.com/studentRoute/update-student/"+id,data)
         .then((res)=>{
             if(res.status === 200)
                 alert("Record updated")
