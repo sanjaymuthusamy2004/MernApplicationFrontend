@@ -14,7 +14,7 @@ export default function CreateStudent(){
 
     const handleSubmit = (event)=>{
         	const data ={name:arr[0],email:arr[1],regNo:arr[2]};    
-     Axios.post("http://localhost:4000/studentRoute/create-student",data)
+     Axios.post("https://mernapplicationbackend-7.onrender.com/studentRoute/create-student",data)
         .then((res)=>{
             if(res.status === 200)
                 alert("new record added")
