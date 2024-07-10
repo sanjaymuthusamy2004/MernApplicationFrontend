@@ -11,7 +11,7 @@ export default function StudentList(){
 
 
     useEffect(()=>{
-        Axios.get("http://localhost:4000/studentRoute/")
+        Axios.get("https://mernapplicationbackend-7.onrender.com/studentRoute/")
         .then((res)=>{
             if(res.status === 200)
                 setArr(res.data);
